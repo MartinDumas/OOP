@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// Базовий клас для страви
+
 class Food {
     final String name;
     final double price;
@@ -24,7 +24,7 @@ class Food {
     }
 }
 
-// Похідні класи для конкретних страв
+
 class Drink extends Food {
     public Drink(String name, double price) {
         super(name, price);
@@ -49,7 +49,6 @@ class Dish extends Food {
     }
 }
 
-// Клас для представлення клієнта
 class Customer {
     private String name;
     public ArrayList<Food> order;
@@ -82,7 +81,6 @@ class Customer {
     }
 }
 
-// Головний клас програми
 public class CafeApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
