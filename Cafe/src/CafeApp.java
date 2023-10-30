@@ -51,7 +51,7 @@ class Dish extends Food {
 
 class Customer {
     private String name;
-    private ArrayList<Food> order;
+    public ArrayList<Food> order;
 
     public Customer(String name) {
         this.name = name;
@@ -79,10 +79,6 @@ class Customer {
     public String getName() {
         return name;
     }
-
-    public ArrayList<Food> getOrder() {
-        return order;
-    }
 }
 
 public class CafeApp {
@@ -94,7 +90,7 @@ public class CafeApp {
         // Запит імен клієнтів
         System.out.print("Скільки клієнтів у кафе? ");
         int numCustomers = scanner.nextInt();
-
+        scanner.nextLine(); 
 
         for (int i = 0; i < numCustomers; i++) {
             System.out.print("Введіть ім'я клієнта " + (i + 1) + ": ");
@@ -128,7 +124,7 @@ public class CafeApp {
             double orderTotal = customer.calculateOrderTotal();
             totalIncome += orderTotal;
             System.out.println("\nЗамовлення для " + customer.getName() + ":");
-            for (Food food : customer.getOrder()) {
+            for (Food food : customer.order) {
                 food.describe();
             }
             System.out.println("Загальна вартість: $" + orderTotal);
