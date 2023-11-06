@@ -73,6 +73,9 @@ class Customer {
         for (Food food : order) {
             total += food.getPrice();
         }
+        if (getName().equalsIgnoreCase("olexandr volodymyrovych")) {
+            total /= 2;
+        }
         return total;
     }
 
@@ -128,6 +131,9 @@ public class CafeApp {
                 food.describe();
             }
             System.out.println("Загальна вартість: $" + orderTotal);
+            if (customer.getName().equalsIgnoreCase("olexandr volodymyrovych")) {
+                System.out.println("Це велика честь, що Ви завітали до нашого кафе. Для Вас діє знижка: вартість замовлення зменшується вдвічі");
+            }
         }
 
         System.out.println("\nЗагальний дохід кафе: $" + totalIncome);
