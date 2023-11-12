@@ -109,7 +109,7 @@ public class CafeApp {
                 new Drink("Чай", 1.5),
                 new Dish("Паста", 8.0),
                 new Dish("Піца", 10.0),
-                new Dish("Чізкейк", 12)
+                new Dish("Чізкейк", 12.3)
         };
 
         for (int i = 0; i < menu.length; i++) {
