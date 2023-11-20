@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-class Food {
+interface Orderable{
+    double getPrice();
+    void describe();
+}
+class Food implements Orderable {
     final String name;
     final double price;
 
@@ -48,8 +51,12 @@ class Dish extends Food {
         super.describe();
     }
 }
-
-class Customer {
+interface CustomerOrder {
+    void  addToOrder(Food food);
+    double calculateOrderTotal();
+    String getName();
+}
+class Customer implements CustomerOrder {
     private String name;
     public ArrayList<Food> order;
 
